@@ -8,14 +8,13 @@ const path = require("path");
 const PORT = process.env.PORT || 8080;
 
 app.get("/notes", (request, response) => {
-    response.sendFile(path.join(__dirname, "..", "..", "notes.html"));
+    response.sendFile(path.join(__dirname, "public/notes.html"));
     console.log("Your Notes!");
 
 })
 
 app.get("/", (request, response) => {
-    // response.sendFile(path.join(__dirname, "..", "..", "index.html"));
-    response.sendFile(path.join(__dirname, "index.html"));
+    response.sendFile(path.join(__dirname, "public/index.html"));
     console.log("Your index!");
 })
 
