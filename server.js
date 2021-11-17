@@ -1,10 +1,12 @@
 
 const express = require("express");
+const app = express();
+
 const fs = require("fs");
 
+app.use(express.static('public'))
 
 
-var app = express();
 var PORT = process.env.PORT || 8080
 
 

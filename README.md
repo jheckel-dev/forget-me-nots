@@ -13,6 +13,7 @@ A simple note taker utilizing express to persistently store notes in a database.
 
 ## Challenges
 - things were going smoothly until I began restructuring my files for heroku deployment and now I cannot fix a get call error when calling for my notes.html file to actually enter the notes. Will continue to tinker with it.
+- got it to store notes but cannot find the solution to fix the error within the css on the notes.html page
 
 
 ## Deployment
