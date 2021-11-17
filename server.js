@@ -1,30 +1,22 @@
+
 const express = require("express");
-const app = express();
 const fs = require("fs");
 
-const path = require("path");
 
 
-const PORT = process.env.PORT || 8080;
+var app = express();
+var PORT = process.env.PORT || 8080
 
-app.get("/notes", (request, response) => {
-    response.sendFile(path.join(__dirname, "public/notes.html"));
-    console.log("Your Notes!");
 
-})
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use("/assets", express.static("./assets"));
 
-app.get("/", (request, response) => {
-    response.sendFile(path.join(__dirname, "public/index.html"));
-    console.log("Your index!");
-})
 
-app.get("/api/notes", (request, response) => {
+require("./routes/html-routes")(app);
+require("./routes/api-routes")(app);
 
-    fs.readFile(path.join(__dirname, "..", "..", "..", "db.json"), function (err, data) {
-        console.log("API Notes!");
-    })
-})
 
-app.listen(PORT, () => {
-    console.log(`Server is listening on PORT ${PORT}`);
+app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
 });
