@@ -13,9 +13,9 @@ A simple note taker utilizing express to persistently store notes in a database.
 
 ## Demo
 
-<img src="https://github.com/jheckel-dev/forget-me-nots/blob/main/Assets/Screen%20Recording%202021-11-17%20at%205.10.01%20PM.gif?raw=true">
-<img src="https://github.com/jheckel-dev/forget-me-nots/blob/main/Assets/Screen%20Shot%202021-11-17%20at%205.17.22%20PM.png?raw=true">
-<img src="https://github.com/jheckel-dev/forget-me-nots/blob/main/Assets/Screen%20Shot%202021-11-17%20at%205.17.29%20PM.png?raw=true">
+<img src="">
+<img src="">
+<img src="">
 
 ## Challenges
 - got it to store notes but cannot find the solution to fix the error within the css on the notes.html page
